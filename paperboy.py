@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Onlinekiosk-paperboy delivers your newspapers and magazines freshly every day.
+FOCUS-paperboy delivers your FOCUS e-magazine freshly every week.
 """
 
 
@@ -29,10 +29,10 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--user-agent', '-ua', required=True, help='User agent you want paperboy to use.')
-    parser.add_argument('--output-directory', '-o', required=True, help='Directory to store the PDFs of the downloaded newspaper issues.')
-    parser.add_argument('--email', '-e', required=True, help='Email address of your account at onlinekiosk.de')
-    parser.add_argument('--password', '-p', required=True, help='Password for your account at onlinekiosk.de')
-    parser.add_argument('--cookie-file', '-c', help='File to store the cookies in.', default='~/.Onlinekiosk-paperboy_cookies.txt')
+    parser.add_argument('--output-directory', '-o', required=True, help='Directory to store the PDFs of the downloaded issues.')
+    parser.add_argument('--email', '-e', required=True, help='Email address of your account at ' + BASE_URL)
+    parser.add_argument('--password', '-p', required=True, help='Password for your account at ' + BASE_URL)
+    parser.add_argument('--cookie-file', '-c', help='File to store the cookies in.', default='~/.FOCUS-paperboy_cookies.txt')
     parser.add_argument('--debug', '-d', action='store_true', help='Increase verbosity.')
 
     if not ext_deps: parser.error("Missing at least one of the python modules 'requests' or 'beautifulsoup4'.")
